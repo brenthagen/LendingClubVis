@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/lending');
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/lending');
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('error', function() {
-  console.log('mongoose connection error');
-});
+// db.on('error', function() {
+//   console.log('mongoose connection error');
+// });
 
-db.once('open', function() {
-  console.log('mongoose connected successfully');
-});
+// db.once('open', function() {
+//   console.log('mongoose connected successfully');
+// });
 
-module.exports = db;
+// module.exports = db;
