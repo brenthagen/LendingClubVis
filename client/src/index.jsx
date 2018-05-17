@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Papa from 'papaparse';
+
+// components to consider:
+  // total/average loan amounts (total credit available)
+  // interest rate/grades (risk profile)
+  // income/verifcation status (borrower quality)
     
 const csv = require('../dist/LoanStats3a_minimum.csv');
 
