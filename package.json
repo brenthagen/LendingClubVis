@@ -7,7 +7,8 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js",
     "start": "webpack -p && node server/index.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "build": "./node_modules/.bin/webpack --config webpack.conf.js",
   },
   "author": "BrentHagen",
   "license": "ISC",
