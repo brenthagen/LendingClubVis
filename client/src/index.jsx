@@ -1,28 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Papa from 'papaparse';
-
-// components to consider:
-  // total/average loan amounts (total credit available)
-  // interest rate/grades (risk profile)
-  // income/verifcation status (borrower quality)
+import Credit from './credit.jsx';
+import Risk from './risk.jsx';
+import Borrower from './borrower.jsx';
     
 const csv = require('../dist/LoanStats3a_minimum.csv');
-
-// const csv = require('../dist/LoanStats3a_minimum.csv');
-
-// Papa.parse(csv, {
-//   complete: function(results) {
-//     console.log("Finished:", results.data);
-//   }
-// });
-
-// Papa.parse('../dist/LoanStats3a_minimum.csv', {
-//   worker: true,
-//   step: function(results) {
-//     console.log("Row:", results.data);
-//   }
-// });
 
 class App extends React.Component {
   constructor(props) {
@@ -32,17 +14,20 @@ class App extends React.Component {
   componentWillMount() {
     console.log('mounting');
     console.log(csv);
-    // Papa.parse(csv, {
-    //   header: true,
-    //   download: true,
-    //   skipEmptyLines: true,
-    //   // Here this is also available. So we can call our custom class method
-    //   complete: (results) => console.log('done', results)//this.updateData
-    // });
   }
 
   render() {
-    return (<div>render this</div>);
+    return (<div>
+      <h1>LendingClub Visualizations</h1>
+      <svg width="300px" height="300px">
+        <rect x="20" y="20" width="60px" height="200" rx="5" ry="5" />
+        <rect x="100" y="20" width="60px" height="200" rx="5" ry="5" />
+        <rect x="180" y="20" width="60px" height="200" rx="5" ry="5"/>
+      </svg>
+      <Credit />
+      <Risk />
+      <Borrower />
+    </div>);
   }
 }
 
