@@ -9,11 +9,14 @@ const csv = require('../dist/LoanStats3a_minimum.csv');
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: csv
+    }
   }
 
   componentWillMount() {
     console.log('mounting');
-    console.log(csv);
+    console.log(this.state.data);
   }
 
   render() {
@@ -27,6 +30,7 @@ class App extends React.Component {
       <Credit />
       <Risk />
       <Borrower />
+      {/*<p>{this.state.data}</p>*/}
     </div>);
   }
 }
