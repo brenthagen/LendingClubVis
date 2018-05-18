@@ -8,7 +8,7 @@
     "server-dev": "nodemon server/index.js",
     "start": "webpack -p && node server/index.js",
     "postinstall": "npm run build",
-    "build": "./node_modules/.bin/webpack --config webpack.conf.js"
+    "build": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "author": "BrentHagen",
   "license": "ISC",
