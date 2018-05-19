@@ -1,6 +1,8 @@
 import React from 'react';
 
 // total/average loan amounts (total credit available)
+// bar for average
+// line for all data
 
 class Credit extends React.Component {
   constructor(props) {
